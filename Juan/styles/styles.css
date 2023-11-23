@@ -148,7 +148,6 @@ footer nav{
     @media only screen and (max-width: 768px) {
     
     header {
-        background: url('images/fishcreek/lilfish.gif') no-repeat center;
         background-size: contain; 
     }
     
