@@ -1,0 +1,66 @@
+body{
+    background-color: white;
+    font-family: Agency FB, 'Calibri';
+    color:#000000;
+}
+header{
+    background-color: black;
+    color: #FFFFFF;
+    width: 100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+h1{
+    line-height: 125%;
+    text-indent: 1em;
+    margin-bottom: 0;
+    font-size: 4em;
+    padding: 10px; 
+    text-shadow: #CCCCCC;
+}
+nav{
+    background-color: black;
+    padding: 5px;
+    float: left;
+    width: 150px; 
+}
+dt{
+    color:black;
+    font-weight: bold;
+}
+dd{
+    font-size:2em;
+}
+.category{
+    background-color: #FFFFFF;
+    font-size:2.5em;
+    color: #000000;
+    padding: 5px;
+    text-shadow: 2px 2px 2px #667;
+}
+footer{
+    font-size:.90em;
+    font-style: italic;
+    padding: 10px; 
+    margin-left: 180px;
+}
+#wrapper{
+    width:80%;
+    min-width: 700px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color: #FFFFFF;
+    color:#000000;
+}
+img{
+    border:none;
+}
+main{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 180px;
+    padding-right: 20px; 
+    padding-bottom: 20px;
+}
