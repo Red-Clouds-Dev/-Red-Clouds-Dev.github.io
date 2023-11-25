@@ -103,7 +103,7 @@ footer{
     font-size:.90em;
     font-style: italic;
     padding: 10px; 
-    margin-left: 180px;
+    margin-left: 20px;
 }
 #wrapper{
     width:80%;
@@ -117,7 +117,6 @@ img{
     border:none;
 }
 main {
-    margin-left: 160px; 
     padding: 20px;
     background-color: var(--background-color); 
     color: #333; 
@@ -129,7 +128,60 @@ footer nav{
 *{
     box-sizing:border-box;
 }
+.about-me {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+}
+
+.grid-item {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid-item.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--background-color);
+}
+
+tr:hover {
+    background-color: var(--background-color);
+}
 #mySubmit {
     margin-left: 9.5em;
 }
@@ -302,7 +354,21 @@ article.blog-post {
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.blog-post figure {
+    margin: 20px 0; 
+    text-align: center; 
+}
 
+.blog-post img {
+    max-width: 10%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.blog-post figcaption {
+    font-size: 0.9em; 
+    color: #666; 
+}
 
 
 @media (max-width: 600px) {
@@ -330,7 +396,7 @@ article.blog-post {
         min-width: 0;
         margin: 0;
     }
-    
+
     h1 {
         margin: 0;
         font-size: 1.8em;
@@ -350,7 +416,7 @@ article.blog-post {
         padding: 0;
         margin: 0;
     }
-    
+
     main {
         font-size: 90%;
         margin: 0;
@@ -367,16 +433,16 @@ article.blog-post {
     }
     }
     @media only screen and (max-width: 768px) {
-    
+
     header {
         background-size: contain; 
     }
-    
+
     h1 {
         font-size: 1.5em;
         line-height: 120%;
     }
-    
+
     nav a {
         font-size: 1.3em;
         border-bottom: 1px solid #330000;
@@ -396,9 +462,9 @@ article.blog-post {
     #mobile {
         display: inline;
     }
-    
+
     #desktop {
         display: none;
     }
-    }
+}
 
