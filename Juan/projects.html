@@ -20,6 +20,7 @@
                 <li><a href="../index.html">Red Clouds Website</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle">Toggle Dark Theme</button>
         <main>
            
             <section class="projects">
@@ -45,4 +46,18 @@
         </main>
     </div>
 </body>
+<script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    themeToggleButton.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+</script>
 </html>
