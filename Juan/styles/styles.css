@@ -103,7 +103,7 @@ footer{
     font-size:.90em;
     font-style: italic;
     padding: 10px; 
-    margin-left: 180px;
+    margin-left: 20px;
 }
 #wrapper{
     width:80%;
@@ -117,7 +117,6 @@ img{
     border:none;
 }
 main {
-    margin-left: 160px; 
     padding: 20px;
     background-color: var(--background-color); 
     color: #333; 
@@ -302,7 +301,21 @@ article.blog-post {
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.blog-post figure {
+    margin: 20px 0; /* Adds space around the image */
+    text-align: center; /* Centers the image and caption */
+}
 
+.blog-post img {
+    max-width: 10%; /* Ensures the image is not wider than its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 5px; /* Optional: rounds the corners of the image */
+}
+
+.blog-post figcaption {
+    font-size: 0.9em; /* Smaller font size for the caption */
+    color: #666; /* A lighter color for the caption */
+}
 
 
 @media (max-width: 600px) {
