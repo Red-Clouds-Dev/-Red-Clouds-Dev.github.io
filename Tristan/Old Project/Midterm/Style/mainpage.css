@@ -1,0 +1,71 @@
+* {
+
+  padding: 0px;
+  
+  margin: 0px;
+  
+  box-sizing: border-box;
+  }
+
+#pageheader {
+    text-align: center;
+   height: 60px;
+    margin-top: 60px;
+   
+}
+.Maincontainer{
+display: grid;
+grid-template-columns: auto 20% 60% auto ;
+
+}
+#nothing{
+height: 1000;
+background-color: black;
+}
+#SideBar {
+height: auto;
+background-color: rebeccapurple;
+margin-right: 10px;
+}
+#SideBarLinks > h3{
+text-align: center;
+padding: 10px;
+border: 5px;
+font-size: xx-large;
+}
+#sideBarLinks li {
+  padding: 10px;
+}
+#SideBarLinks li p {
+  text-align: center;
+}
+#SideBarLinks a{
+  text-align: center;
+  display: block;
+}
+#BlogBox {
+  height: auto;
+  background-color: rebeccapurple;
+}
+#BlogPost li{
+  display: grid;
+  grid-template-columns: 20% 10px auto;
+  margin: 10px;
+  padding: 10px;
+  border: 5px;
+  
+
+}
+#BlogPost li img {
+ grid-column: 1 / span 1;
+  width: 100%;
+}
+#BlogPost li div {
+grid-column: 3 / span 1;
+}
+
+
+
+
+
+
