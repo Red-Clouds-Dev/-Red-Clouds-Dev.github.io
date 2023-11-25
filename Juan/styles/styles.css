@@ -128,7 +128,36 @@ footer nav{
 *{
     box-sizing:border-box;
 }
-
+.about-me {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+  }
+  
+  .grid-item {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .grid-item.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-item.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
 #mySubmit {
     margin-left: 9.5em;
 }
