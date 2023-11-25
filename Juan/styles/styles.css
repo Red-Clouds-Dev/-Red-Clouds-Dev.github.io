@@ -180,7 +180,7 @@ th {
 }
 
 tr:hover {
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
 }
 #mySubmit {
     margin-left: 9.5em;
