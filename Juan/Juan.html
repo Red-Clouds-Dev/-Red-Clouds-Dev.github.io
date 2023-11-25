@@ -22,9 +22,9 @@
             <li><a href="../index.html">Red Clouds Website</a></li>
         </ul>
     </nav>
-    <br>
-    <br>
+    <button id="theme-toggle">Toggle Dark Theme</button>
     <main>
+        
         <dt class ="category">Welcome to my Portfolio!</dt>
         <br>
         <dd> My name is Juan and I'm from the beautiful state of Washington! I am currently majoring in Computer Science at Western Washington University and embarking on an exciting adventure to carve out a career in technology. My academic life as a full-time student is filled with algorithms and code, and every chance I get to solve a problem feeds my enthusiasm for this constantly developing profession.<br><br>I'm now looking for internship opportunities that will enable me to apply the information and skills I've learned in the classroom to get real-world experience. One of my strongest suit is my thoroughness; I take great pride in going above and beyond to make sure that every job meets my needs and exceeds my expectations. I work best in demanding circumstances, and I'm excited to contribute my strong work ethic to a group of people that share my high regard for painstaking attention to detail.<br><BR>In computer science, teamwork is essential for success, therefore I'm thrilled about the chance to join a group where my input will have a big influence. I'm excited to contribute my passion for learning and developing within a dynamic team, as well as my solid background in computer science concepts.</dd>
@@ -36,4 +36,18 @@
     </footer>
      </div>
     </body>
+    <script>
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        themeToggleButton.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </html>
