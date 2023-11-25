@@ -14,8 +14,20 @@
     --nav-text-color: #ffffff;
 }
 #theme-toggle {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: var(--primary-color); 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    outline: none; 
+    margin: 10px;
+    font-weight: bold;
 }
+
 body {
     background-color: var(--background-color);
     font-family: 'Francois One', sans-serif;
