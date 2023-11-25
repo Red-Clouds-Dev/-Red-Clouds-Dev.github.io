@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Juan Guzman-Soto
+    </title>
+    <link rel="stylesheet" type="text/css" href = "./styles/styles.css"/>
+</head>
+<body>
+    <div id="wrapper">
+    <header> 
+        <h1>Juan Guzman-Soto's Contact Page</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Juan.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contacts.html">Contact Me!</a></li>
+            <li><a href="blog.html">Person Blog</a></li>
+            <li><a href="../index.html">Red Clouds Website</a></li>
+        </ul>
+    </nav>
+    <main>
+        <dt class ="category">Contact Me Using This Form!</dt>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit" id="submitBtn">Send</button>
+        </form>
+
+    </main>
+    <footer> 
+        Copyright &copy; 2023 Juan Guzman-Soto Portfolio<br> guzmanjuan856@gmail.com
+    </footer>
+     </div>
+     <script>
+   document.getElementById('contactForm').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    var formData = new FormData(event.target);
+    var submitBtn = document.getElementById('submitBtn');
+
+    fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        console.log(data);
+
+        submitBtn.innerHTML = '&#10004;'; 
+        submitBtn.classList.add('success');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+     </script>
+    </body>
+</html>
