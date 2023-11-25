@@ -133,13 +133,63 @@ footer nav{
 #submitBtn.success {
     background-color: green;
     color: white;
-    /* other styling as needed */
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: calc(33% - 20px);
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-title {
+    margin: 0 0 10px 0;
+}
+
+.project-description {
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background: #555;
 }
 @media (max-width: 600px) {
     #contactForm {
         padding: 10px;
     }
 }
+
+
 @media only screen and (max-width: 1024px){
     body {
         margin: 0;
