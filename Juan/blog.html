@@ -23,17 +23,42 @@
         <button id="theme-toggle">Toggle Dark Theme</button>
         <main>
             <article class="blog-post">
-                <h2 class="post-title">Blog Post #1</h2>
-                <p class="post-date">Posted on 11/25/2023</p>
-                <p class="post-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur amet animi illum unde in cumque odio. Eligendi, neque voluptatem.
+                <h2 class="post-title">Red Clouds Development and Personal Development</h2>
+                <p class="post-date">Posted on 11/24/2023</p>
+                <p class="post-preview">
+                    We've reached a major milestone in our journey today, November 24, 2023. In order to improve the user experience of our portfolio...
                 </p>
-                <a href="#" class="read-more">Read more...</a>
+              
+                <div class="post-full-content" id="fullContent1">
+                    <p>
+                        We at Red Clouds Development have explored the complexities of DOM modification. Since many of us are exploring the world of web programming for the first time, it's an exciting endeavor.
+                    </p>    
+                    <p>I accept the natural duty that comes with leading my coworkers through our project milestones as the team leader at Red Clouds. The position is not without stress, since I am frequently responsible for the team's performance and the project's completion. However, the spirit of cooperation among our members propels us forward and strengthens our professional resumes every day.</p>
+                    <p>At this point, I'm not sure what direction to take with our portfolio. Would a section titled "About Me" provide a personal touch? Maybe adding more JavaScript interactions would help us become better coders? There's uncertainty about the way forward. But the most freeing thing about this endeavor is how much freedom it gives me to be independent of external norms and timelines. This flexibility is a welcome adjustment that enables me to create something that I don't consider finished until it fulfills my own personal requirements.</p>
+                </div>
+                <a href="#" class="read-more" data-target="fullContent1">Read more...</a>
+                <footer>
+                    <p>Written by: Juan</p>
+                </footer>
             </article>
-           
         </main>
     </div>
+    
 </body>
+<script>
+    document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        const fullContentId = this.getAttribute('data-target');
+        const fullContent = document.getElementById(fullContentId);
+        
+
+        fullContent.classList.toggle('expanded');
+    
+        this.textContent = fullContent.classList.contains('expanded') ? 'Read less...' : 'Read more...';
+    });
+});
+</script>
 <script>
     const themeToggleButton = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
