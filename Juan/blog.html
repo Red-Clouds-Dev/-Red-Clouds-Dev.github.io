@@ -24,6 +24,32 @@
         </nav>
         <button id="theme-toggle">Toggle Dark Theme</button>
         <article class="blog-post">
+            <h2 class="post-title">Reflecting and Preparing: My Year in Computer Programming and Science</h2>
+            <p class="post-date">Posted on 11/25/2023</p>
+            <p class="post-preview">
+                As the year winds down, it feels like just yesterday that we were ringing in the New Year. Time has flown by, and it's that season again where we reflect on the past months...
+            </p>
+                <div class="post-full-content" id="fullContent1">
+                    <p>
+                        This year, much like many others, I've tread carefully due to the global circumstances. It wasn't a year for large-scale tech conferences or extensive collaborative projects, but rather a period of cautious navigation and thoughtful planning.
+                    </p>    
+                    <p>I've felt a little limited in the field of computer science and programming. There wasn't the normal rush of hackathons, coding marathons, and group coding sessions, which made me feel like my potential wasn't reached. 
+                        But rather than seeing this as a setback, I see it as inspiration for the upcoming year.</p>
+                    <p>I am filled with eagerness and resolve as I look ahead. I want to fully commit to learning programming and computer science, 
+                        pushing the boundaries and taking advantage of every chance that presents itself. 
+                        I'm prepared to make up for this year's lack of activity, whether it is by working on creative projects, investigating cutting-edge technology, or participating 
+                        in community-driven programming activities.</p>
+                    <p>I can't wait to share this technical journey with you. 
+                        As I prepare for an exciting year filled with coding, creativity, and education, follow along for frequent updates. 
+                        I am so grateful for your involvement and support, and I can't wait to share my learnings and experiences with you.</p>
+                        <p>Cheers to another year full of innovative coding, never-ending education, and deep friendships within the tech community. This year, let's make it one to remember!</p>
+                </div>
+                <a href="#" class="read-more" data-target="fullContent1">Read more...</a>
+                <footer>
+                    <p>Written by: Juan</p>
+                </footer>
+            </article>
+        <article class="blog-post">
             <h2 class="post-title">Red Clouds Development and Personal Development</h2>
             <p class="post-date">Posted on 11/24/2023</p>
             <p class="post-preview">
@@ -52,34 +78,39 @@
             Copyright &copy; 2023 Juan Guzman-Soto Portfolio<br> guzmanjuan856@gmail.com
         </footer>
     </div>
+    <script>
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
     
-</body>
-<script>
-    document.querySelectorAll('.read-more').forEach(button => {
-    button.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        const fullContentId = this.getAttribute('data-target');
-        const fullContent = document.getElementById(fullContentId);
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    
+        if (currentTheme === 'dark') {
+            themeToggleButton.textContent = 'Switch to light theme'; 
+        }
+    
+        themeToggleButton.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+  
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme); 
+    
+            themeToggleButton.textContent = newTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const fullContentId = this.getAttribute('data-target');
+            const fullContent = document.getElementById(fullContentId);
+            
+    
+            fullContent.classList.toggle('expanded');
         
-
-        fullContent.classList.toggle('expanded');
-    
-        this.textContent = fullContent.classList.contains('expanded') ? 'Read less...' : 'Read more...';
+            this.textContent = fullContent.classList.contains('expanded') ? 'Read less...' : 'Read more...';
+        });
     });
-});
-</script>
-<script>
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    themeToggleButton.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme');
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
-</script>
+    </script>
+</body>
 </html>

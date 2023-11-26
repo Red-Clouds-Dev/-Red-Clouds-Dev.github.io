@@ -32,7 +32,7 @@
                     <div class="project-info">
                         <h2 class="project-title">Red Clouds Bot</h2>
                         <p class="project-description">A Discord bot used primarily for league of legends tracking, moderating text channels, and small games. </p>
-                        <a href="#" class="project-link">View Project</a>
+                        <a href="https://github.com/JuanGuzmanSoto/RedCloudsBot" class="project-link">View Project</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -48,7 +48,7 @@
                     <div class="project-info">
                         <h2 class="project-title">osu!Stat checker</h2>
                         <p class="project-description">A small python application that searches up a players username and finds details about that player. </p>
-                        <a href="#" class="project-link">View Project</a>
+                        <a href="https://github.com/JuanGuzmanSoto/practice-osu-development" class="project-link">View Project</a>
                     </div>
                 </div>
                 
@@ -58,19 +58,25 @@
             Copyright &copy; 2023 Juan Guzman-Soto Portfolio<br> guzmanjuan856@gmail.com
         </footer> 
     </div>
+    <script>
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+    
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    
+        if (currentTheme === 'dark') {
+            themeToggleButton.textContent = 'Switch to light theme'; 
+        }
+    
+        themeToggleButton.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+  
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme); 
+    
+            themeToggleButton.textContent = newTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+        });
+    </script>
 </body>
-<script>
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    themeToggleButton.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme');
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
-</script>
 </html>

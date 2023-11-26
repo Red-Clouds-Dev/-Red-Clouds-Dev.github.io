@@ -37,19 +37,26 @@
         Copyright &copy; 2023 Juan Guzman-Soto Portfolio<br> guzmanjuan856@gmail.com
     </footer>
      </div>
-    </body>
-    <script>
+     <script>
         const themeToggleButton = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'light';
-
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+    
         document.documentElement.setAttribute('data-theme', currentTheme);
-
+    
+        if (currentTheme === 'dark') {
+            themeToggleButton.textContent = 'Switch to light theme'; 
+        }
+    
         themeToggleButton.addEventListener('click', () => {
             const theme = document.documentElement.getAttribute('data-theme');
             const newTheme = theme === 'light' ? 'dark' : 'light';
-
+  
             document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+            localStorage.setItem('theme', newTheme); 
+    
+            themeToggleButton.textContent = newTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
         });
     </script>
+    </body>
+    
 </html>
