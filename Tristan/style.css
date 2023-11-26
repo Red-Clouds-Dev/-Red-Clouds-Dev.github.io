@@ -13,14 +13,56 @@ body {
     background-position: center;
     text-align: center;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  #nav a {
+    display: block;
+    padding: 20px;
+    top: 0;
+    position:relative;
+
+    font-size: 1.2rem;
+    text-align: center;
     
-    padding: 10px 20px;
+    text-decoration: none;
+}
+  #nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto ;
     
-  }
+    height: 20px;
+}
+#container{
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+#ContainerBox {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 1500px;
+  
+  margin: 50px;
+}
+
+#ContainerBox h3 {
+  padding: 20px;
+  text-align: center;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#ContainerBox img {
+  padding: 10px;
+  width: 40%;
+  margin: 0 auto; 
+}
+
+#ContainerBox p {
+  font-size: x-large;
+  font-style: normal;
+}
+
 img{
     border:none;
     
@@ -48,55 +90,47 @@ footer{
     padding: 10px; 
     margin-left: 180px;
 }
-#wrapper{
-    width:80%;
-    min-width: 700px;
-    margin-right:auto;
-    margin-left:auto;
-    
-}
-*{
-    box-sizing:border-box;
-}
+
+ 
   
-  /* Customize other elements as needed */
+  
   h1, h2, h3, p {
-    color: #333; /* Dark text color for headings and paragraphs */
+    color: #333; 
   }
   
   a {
-    color: #007bff; /* Link color */
+    color: #007bff; 
   }
   
   a:hover {
-    color: #0056b3; /* Link color on hover */
+    color: #0056b3; 
   }
   
-  /* Dark theme styles */
+  
   body.dark-theme {
-    background-color: #1a1a1a; /* Dark background color */
-    color: #fff; /* Light text color */
+    background-color: #1a1a1a; 
+    color: #fff; 
   }
   
   body.dark-theme h1,
   body.dark-theme h2,
   body.dark-theme h3,
   body.dark-theme p {
-    color: #fff; /* Light text color for headings and paragraphs */
+    color: #fff; 
   }
   
   body.dark-theme a {
-    color: #66b2ff; /* Link color */
+    color: #66b2ff; 
   }
   
   body.dark-theme a:hover {
-    color: #3385ff; /* Link color on hover */
+    color: #3385ff; 
   }
   
-  /* Example of a button style */
+  
   .btn {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #007bff; 
+    color: #fff; 
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -104,5 +138,5 @@ footer{
   }
   
   .btn:hover {
-    background-color: #0056b3; /* Button background color on hover */
+    background-color: #0056b3; 
   }
