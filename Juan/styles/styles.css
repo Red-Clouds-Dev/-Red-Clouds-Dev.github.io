@@ -109,6 +109,14 @@ dd{
     padding: 5px;
     text-shadow: 2px 2px 2px #667;
 }
+.footer2{
+  font-size: 0.9em;
+  font-style: italic;
+  padding: 10px;
+  margin-left: 20px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
 footer {
     font-size: 0.9em;
     font-style: italic;
