@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="wrapper">
-    <header> 
+    <header>
         <h1>About Juan Guzman-Soto</h1>
     </header>
     <nav>
@@ -32,49 +32,68 @@
                 <h2>Introduction</h2>
                 <p>I'm a 20-year-old computer science major in college who is becoming more knowledgeable in machine learning and web development. Aside from my academic endeavors, I have a strong interest in gaming and keyboard building.</p>
                 </div>
-                <div class="grid-item image"> 
+                <div class="grid-item image">
                     <img src="./images/keyboard.png" alt="My custom-built keyboard">
                   </div>
-              <div class="grid-item text"> 
+              <div class="grid-item text">
                 <h2>Philosophy</h2>
                 <p>I really think that perseverance and a development mentality are powerful. I consider cooperation and information exchange to be essential components of my professional development, and I'm dedicated to lifelong learning and remaining current with technological advancements..</p>
                 </div>
-              <div class="grid-item image"> 
+              <div class="grid-item image">
                 <img src="./images/cat2.jpg" alt="Gin and Traveler">
               </div>
-              <div class="grid-item text"> 
+              <div class="grid-item text">
                 <h2>Personal Life</h2>
                 <p>My two cats, Gin and Traveler, have been my companions since they were kittens in 2019. They are a joyful part of my life and offer endless inspiration. Although not a frequent traveler, I've enjoyed my time exploring places like California and Missouri.</p>
                 </div>
-              <div class="grid-item image"> 
+              <div class="grid-item image">
                 <img src="./images/cats.jpg" alt="Gin and Traveler">
               </div>
             </div>
           </section>
 
     </main>
-    
-    <footer> 
-        Copyright &copy; 2023 Juan Guzman-Soto Portfolio<br> guzmanjuan856@gmail.com
-    </footer>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-navigation">
+          <a href="aboutme.html">About</a> |
+          <a href="skills.html">Skills</a> |
+          <a href="projects.html">Projects</a> |
+          <a href="contacts.html">Contact</a> |
+          <a href="blog.html">Blog</a> |
+        </div>
+        <div class="footer-icons">
+          <div class="footer-legal">
+            <a href="/privacy-policy">Privacy Policy</a> |
+            <a href="/terms-of-service">Terms of Service</a>
+          </div>
+      <a href="https://github.com/JuanGuzmanSoto">
+        <img src="./images/github.svg" alt="GitHub" />
+      </a
+        <div class="footer-copy">
+          <p>Copyright © 2023 Juan Guzman-Soto Portfolio</p>
+        </div>
+      </div>
+  </footer>
      </div>
      <script>
       const themeToggleButton = document.getElementById('theme-toggle');
       const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
-  
+
       document.documentElement.setAttribute('data-theme', currentTheme);
-  
+
       if (currentTheme === 'dark') {
-          themeToggleButton.textContent = 'Switch to light theme'; 
+          themeToggleButton.textContent = 'Switch to light theme';
       }
-  
+
       themeToggleButton.addEventListener('click', () => {
           const theme = document.documentElement.getAttribute('data-theme');
           const newTheme = theme === 'light' ? 'dark' : 'light';
 
           document.documentElement.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme); 
-  
+          localStorage.setItem('theme', newTheme);
+
           themeToggleButton.textContent = newTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
       });
   </script>

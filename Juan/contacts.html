@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="wrapper">
-    <header> 
+    <header>
         <h1>Juan Guzman-Soto's Contact Page</h1>
     </header>
     <nav>
@@ -30,23 +30,42 @@
         <form id="contactForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-        
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-        
+
             <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject">
-        
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-        
+
             <button type="submit" id="submitBtn">Send</button>
         </form>
 
     </main>
-    <footer> 
-        Copyright &copy; 2023 Juan Guzman-Soto Portfolio<br> guzmanjuan856@gmail.com
-    </footer>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-navigation">
+          <a href="aboutme.html">About</a> |
+          <a href="skills.html">Skills</a> |
+          <a href="projects.html">Projects</a> |
+          <a href="contacts.html">Contact</a> |
+          <a href="blog.html">Blog</a> |
+        </div>
+        <div class="footer-icons">
+          <div class="footer-legal">
+            <a href="/privacy-policy">Privacy Policy</a> |
+            <a href="/terms-of-service">Terms of Service</a>
+          </div>
+      <a href="https://github.com/JuanGuzmanSoto">
+        <img src="./images/github.svg" alt="GitHub" />
+      </a
+        <div class="footer-copy">
+          <p>Copyright © 2023 Juan Guzman-Soto Portfolio</p>
+        </div>
+      </div>
+  </footer>
      </div>
      <script>
    document.getElementById('contactForm').addEventListener('submit', function(event){
@@ -68,7 +87,7 @@
     .then(data => {
         console.log(data);
 
-        submitBtn.innerHTML = '&#10004;'; 
+        submitBtn.innerHTML = '&#10004;';
         submitBtn.classList.add('success');
     })
     .catch(error => {
@@ -79,20 +98,20 @@
       <script>
         const themeToggleButton = document.getElementById('theme-toggle');
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
-    
+
         document.documentElement.setAttribute('data-theme', currentTheme);
-    
+
         if (currentTheme === 'dark') {
-            themeToggleButton.textContent = 'Switch to light theme'; 
+            themeToggleButton.textContent = 'Switch to light theme';
         }
-    
+
         themeToggleButton.addEventListener('click', () => {
             const theme = document.documentElement.getAttribute('data-theme');
             const newTheme = theme === 'light' ? 'dark' : 'light';
-  
+
             document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme); 
-    
+            localStorage.setItem('theme', newTheme);
+
             themeToggleButton.textContent = newTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
         });
     </script>
